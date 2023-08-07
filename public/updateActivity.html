@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Activity</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  <header >
+    <a  href="index.html"> <img class="logo" src="./images/MicrosoftTeams-image.png" alt="Girl Scouts Logo"></a>
+    <h1>Welcome to Our Troop 7174</h1>
+    <div>
+      <button class="btn" > <a class="btn" href="dashboard.html">Dashboard</a></button>
+      <button class="btn" id="logoutButton">Logout</button>
+      
+    </div>
+  </header>
+  <h1>Update Activity Information</h1>
+
+
+  <div class="centered-form">
+          <form id="updateActivityForm" >
+            <div>
+              <label for="activityName">Activity Name:</label>
+              <input type="text" id="activityName" name="activityName" class="form-control" required>
+            </div>
+            
+            <div>
+              <label for="date">Date</label>
+              <input type= "date" id="date" name="date" class="form-control" required>
+              <!-- <input type="date" placeholder="YYYY-MM-DD" id="date"  name="date"  pattern="\d{4}-\d{2}-\d{2}"  class="form-control" required><br> -->
+            </div>
+            <div>
+                <label for="age">Description:</label>
+                <input type="text" id="description" name="description" class="form-control" required>
+              </div>
+            
+            <button type="submit" class="btn">Update Activity</button>
+          </form>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="logout.js"></script>
+  <script src="updateActivity.js"></script>
+</body>
+</html>

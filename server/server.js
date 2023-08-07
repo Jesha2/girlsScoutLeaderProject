@@ -14,7 +14,7 @@ app.use(express.static('public'))
 
 const { seed } = require('./controllers/seed.js')
 const { userLogin, userSignup } = require('./controllers/userAuthentication')
-const { getGirls, getActivities, updateGirlsInfo, deleteGirls, addGirl, getActivitiesByGirl,updateActivity,deleteActivity, addActivity, getActivity, getGirlsByActivity, getGirlsNotInActivity,addParticipant } = require('./controllers/girlsScout');
+const { getGirls, getActivities, updateGirlsInfo, deleteGirl, addGirl, getActivitiesByGirl,updateActivity,deleteActivity, addActivity, getActivity, getGirlsByActivity, getGirlsNotInActivity,addParticipant } = require('./controllers/girlsScout');
 
 
 //entry-point for app
@@ -45,7 +45,7 @@ app.get('/api/getGirlsByActivity/:activity_id',getGirlsByActivity)//used when an
 app.get('/api/getGirlsNotInActivity/:activity_id',getGirlsNotInActivity)//used when an activity is clicked to get details,get the list girls who are not part of the activity
 
 app.put('/api/updateGirlsInfo',updateGirlsInfo)
-app.delete('/api/deleteGirls/:id',deleteGirls)
+app.delete('/api/deleteGirl/:id',deleteGirl)
 app.put('/api/updateActivity',updateActivity)
 app.delete('/api/deleteActivity/:id',deleteActivity)
 

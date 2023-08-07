@@ -1,10 +1,10 @@
+
+
 if(sessionStorage.getItem("token") == null)
   (window.location.href = "/public/index.html") && sessionStorage.clear()
     else{
     //alert("ypu are in dashboard")
     }
-  
-  
 
     //let userId = sessionStorage.getItem("userId");
     let id = sessionStorage.getItem("userId");
@@ -19,14 +19,29 @@ if(sessionStorage.getItem("token") == null)
     function deleteGirl(girl_id,girl_name){
       const result = window.confirm(`Are you sure you want to delete ${girl_name}`);
       if (result) {
+      
+              // Delete girl records
+              axios.delete(`http://localhost:4001/api/deleteGirl/${girl_id}`)
+              .then(response =>{
+                console.log('girl scout  deleted successfully:')   ;
+                 window.location.href = `dashboard.html`;   
+              }) .catch (error=> 
+                  console.error('Error deleting data:', error)
+              )
       }
 
     }
     function deleteActivity(activity_id,activity_name){
       const result = window.confirm(`Are you sure you want to delete ${activity_name}`);
       if (result) {
-      }
+              axios.delete(`http://localhost:4001/api/deleteActivity/${activity_id}`)
+              .then(response=> {console.log(`Deletion of ${activity_name} successful`);
+                window.location.href = `dashboard.html`;   
 
+            })
+            .catch(err => console.error(" Error while deleting activity " +err));
+
+      }
     }
 
     function populateGirlsList() {
@@ -77,6 +92,8 @@ if(sessionStorage.getItem("token") == null)
             updateButton.textContent = 'Edit';
             updateButton.classList.add('btn');
             updateButton.addEventListener('click', () => {
+                // Store the activity data in sessionStorage
+                sessionStorage.setItem('currentGirl', JSON.stringify(girl));
               window.location.href = `updateGirl.html?id=${girl.girl_id}`; // Navigate to update page
             });
     
@@ -154,6 +171,7 @@ if(sessionStorage.getItem("token") == null)
             updateButton.textContent = 'Edit';
             updateButton.classList.add('btn');
             updateButton.addEventListener('click', () => {
+              sessionStorage.setItem('currentActivity', JSON.stringify(activity));
               window.location.href = `updateActivity.html?id=${activity.activity_id}`; // Navigate to update page
             });
     

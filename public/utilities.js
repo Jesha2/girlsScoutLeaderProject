@@ -28,10 +28,13 @@ dashboardBtnContainer.appendChild(logoutBtn);
   function logout() {
       let userId = sessionStorage.getItem("userId");
       let token = sessionStorage.getItem("token");
-      alert("Are you really sure you want to log out")
-      sessionStorage.removeItem('userId');
-      sessionStorage.removeItem('token');
-      window.location.href = 'index.html';
+      if(window.confirm('Are you sure you want to log out?')){
+      
+        //alert("Are you really sure you want to log out")
+        sessionStorage.removeItem('userId');
+        sessionStorage.removeItem('token');
+        window.location.href = 'index.html';
+      }
   
   }
 

@@ -11,23 +11,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         document.getElementById('age').textContent = girl.age;
 
         console.log(girl);
-        
-    // create table activities(
-    //     activity_id serial primary key,
-    //     activity_name varchar not null,
-    //     date date not null,
-    //     description text null,
-    //     leader_id integer references leaders(leader_id)
-    //     create table girls(
-    //         girl_id serial primary key,
-    //         leader_id integer references leaders(leader_id),
-    //         girl_name varchar not null,
-    //         guardian_name varchar not null,
-    //         contact_number varchar not null,
-    //         age integer not null
-        
-    // );
-    //);
+
         try {
             // Fetch and display girls who are part of the girl
             const response = await axios.get(`http://localhost:4001/api/getActivitiesByGirl/${girl.girl_id}`);

@@ -12,15 +12,14 @@ const getFormDataToLogIn = (e) => {
     password: password
   };
 
-  postUserDatalogIn(leaderData);
-
+  postUserDataLogIn(leaderData);
   document.getElementById('loginForm').reset();
 };
 
-function postUserDatalogIn(leaderData) {
+function postUserDataLogIn(leaderData) {
   axios.post('http://localhost:4001/api/login', leaderData)
   .then(async (response) => {
-      alert("Yaay, You have been successfully logged in");
+      //alert("Yaay, You have been successfully logged in");
       console.log(response.data);
       let token = await response.data.token;//we will wait till token is created
       sessionStorage.setItem("token", token);

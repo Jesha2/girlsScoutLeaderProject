@@ -47,8 +47,8 @@ module.exports = {
     },
 
 
-    deleteGirls:(req,res)=>{
-        console.log("deleteGirls");
+    deleteGirl:(req,res)=>{
+        console.log("deleteGirl");
 
         const {id} = req.params
         sequelize.query(`
