@@ -151,7 +151,10 @@ module.exports = {
         console.log("getActivitiesByGirl Girls");
         const {girl_id} = req.params
         sequelize.query(`
-          select * from participation where girl_id = ${girl_id}
+          select a.activity_name, a.activity_id from activities a
+          join participation p on a.activity_id = p.activity_id 
+          where p.girl_id = ${girl_id}
+
         `).then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => res.status(400).send(err))
     },

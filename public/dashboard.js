@@ -58,7 +58,11 @@ if(sessionStorage.getItem("token") == null)
             const nameLink = document.createElement('a');
             nameLink.textContent = girl.girl_name;
             nameLink.href = `girlDetails.html?id=${girl.girl_id}`; // Link to the girl's detail page
-    
+            // Add a click event listener to the anchor tag
+            nameLink.addEventListener('click', () => {
+              // Store the activity data in sessionStorage
+              sessionStorage.setItem('currentGirl', JSON.stringify(girl));
+            });
             // Create delete button
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Delete';
