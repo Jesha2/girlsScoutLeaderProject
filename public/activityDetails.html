@@ -16,24 +16,26 @@
       
     </div>
 </header>
-    <div id="activityDetails">
+    <div id="activityDetails" class="centered">
         <h2>Activity Information</h2>
-        <p><strong>Name:</strong> <span id="activityName"></span></p>
+        <p ><strong>Name:</strong> <span id="activityName" ></span></p>
         <p><strong>Date:</strong> <span id="activityDate"></span></p>
         <p><strong>Description:</strong> <span id="activityDescription"></span></p>
     </div>
     <hr>
-    <div id="participants">
-        <h2>Participants</h2>
+    <div id="participants" class="centered">
+    <h2>Girls part of this activity</h2>
+
         <ul id="participantList"></ul>
     </div>
     <hr>
-    <div id="addParticipant">
-        <h2>Add Participant</h2>
-        <select id="girlSelect"></select>
-        <button id="addParticipantBtn">Add Participant</button>
+    <h2>Add Girls to this activity</h2> 
+    <div id="addParticipant" >
+        <select id="girlSelect" ></select>
+        <button class = "btn" id="addParticipantBtn">Add Participant</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="logout.js"></script>
 
     <script src="activityDetails.js"></script>
 </body>

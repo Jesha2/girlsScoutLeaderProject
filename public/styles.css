@@ -88,6 +88,7 @@ button a{
     /* min-height: calc(100vh - 200px); */
   }
   
+  
   form {
     margin-top:2%;
     width: 300px;
@@ -156,12 +157,16 @@ button a{
 }
 
 /* Style for the girls list */
-.girls-list{
+.girls-list, .activities-list{
   flex: 1;
   background-color: #b2deb5;
   padding: 20px;
   
 }
+.activities-list
+ {
+  background-color: #b4ecc0;
+} 
 .girl-item, .activity-item{
   margin:17px;
   padding : 7px;
@@ -177,11 +182,7 @@ button a{
   margin:12px;
 }
 /* Style for the activities list */
-.activities-list {
-  flex: 1;
-  background-color: #b4ecc0;
-  padding: 20px;
-} 
+
 /* Style for the anchor tags in girls /activities list */
 a{
     cursor:grabbing;
@@ -209,7 +210,25 @@ a{
     animation: fadeIn 0.7s ease-in-out;
    }*/ /* Apply the animation */
   
+   .centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: left; */
+  }
+  #addParticipant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+  
+  #addParticipant select {
+    margin-right: 10px; 
+    /* Add spacing between select and button */
+    width: 150px;
+    height:35px;/* Adjust the width  */
+}
 
 
 
