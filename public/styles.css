@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #7bcf80;
   font-weight: bold;
+  color:#04670c;
   /* animation: fadeIn 0.7s ease-in-out; */
 }
 
@@ -209,26 +210,44 @@ a{
   /* a {
     animation: fadeIn 0.7s ease-in-out;
    }*/ /* Apply the animation */
-  
+   .flex-container {
+    display: flex;
+    justify-content: space-between;}
+    /* Distribute items to the left and right edges */
+
    .centered {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* text-align: left; */
   }
-  #addParticipant {
+
+  /* select {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
   
-  #addParticipant select {
+  select {
     margin-right: 10px; 
     /* Add spacing between select and button */
     width: 150px;
+    color:#04670c;
     height:35px;/* Adjust the width  */
 }
+
+ 
+ #participants {
+    width: 50%; }
+
+  #addParticipant {
+    width: 50%; 
+    text-align: center;
+  }
+          /* Adjust the width as needed */
+        
+        
 
 
 
