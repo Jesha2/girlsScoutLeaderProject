@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Activity</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include your styles if needed -->
+</head>
+<body>
+  <header >
+    <a  href="index.html"> <img class="logo" src="./images/MicrosoftTeams-image.png" alt="Girl Scouts Logo"></a>
+    <h1>Welcome to Our Troop 7174</h1>
+    <div>
+      <button class="btn" > <a class="btn" href="dashboard.html">Dashboard</a></button>
+      <button class="btn" id="logoutButton">Logout</button>
+      
+    </div>
+</header>
+  <div  class="centered-form">
+ 
+  <form id="addActivityForm">
+    <h2>Add Activity Details</h2>
+    <label for="activityName">Activity Name:</label>
+    <input type="text" id="activityName" class="form-control" name="activityName" required><br>
+
+    <label for="description">Description:</label>
+    <input type="text" id="description" class="form-control" name="activityName" required><br>
+
+    <label for="date">Date :</label>
+    <input type="date" placeholder="YYYY-MM-DD" id="date"  name="date"  pattern="\d{4}-\d{2}-\d{2}"  class="form-control" required><br>
+
+   
+    <!-- <button type="submit" class="btn" id="addGirlSubmitBtn">Add Girl</button> -->
+
+    <button type="submit" class="btn" id="addActivitySubmitBtn" onclick="addActivity(event)">Add Activity</button>
+
+  </form>
+</div>
+<div id="errorMessage" class="error-message"></div>  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="girlActivityMethods.js"></script>
+</body>
+</html>

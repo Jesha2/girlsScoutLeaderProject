@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Activity Details</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include your styles if needed -->
+</head>
+<body>
+  <header >
+    <a  href="index.html"> <img class="logo" src="./images/MicrosoftTeams-image.png" alt="Girl Scouts Logo"></a>
+    <h1>Welcome to Our Troop 7174</h1>
+    <div>
+      <button class="btn" > <a class="btn" href="dashboard.html">Dashboard</a></button>
+      <button class="btn" id="logoutButton">Logout</button>
+      
+    </div>
+</header>
+    <div id="activityDetails">
+        <h2>Activity Information</h2>
+        <p><strong>Name:</strong> <span id="activityName"></span></p>
+        <p><strong>Date:</strong> <span id="activityDate"></span></p>
+        <p><strong>Description:</strong> <span id="activityDescription"></span></p>
+    </div>
+    <hr>
+    <div id="participants">
+        <h2>Participants</h2>
+        <ul id="participantList"></ul>
+    </div>
+    <hr>
+    <div id="addParticipant">
+        <h2>Add Participant</h2>
+        <select id="girlSelect"></select>
+        <button id="addParticipantBtn">Add Participant</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="activityDetails.js"></script>
+</body>
+</html>
+
+</html>

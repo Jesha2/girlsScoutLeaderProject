@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Girl Scouts Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header >
+      <a  href="index.html"> <img class="logo" src="./images/MicrosoftTeams-image.png" alt="Girl Scouts Logo"></a>
+        <h1>Welcome to Our Troop 7174</h1>
+        <div>
+          <button class="btn"><a href="index.html">Home</a></button>
+          <button class="btn" id="signupBtn"><a href="signup.html">Sign Up</a></button>
+        </div>
+      </header>
+
+  <div class="centered-form">
+   
+    <form id="loginForm">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" class="form-control" required>
+      </div>
+      <button type="submit" id="loginButton" class="btn">Login</button>
+    </form>
+    
+  </div>
+  <div id="errorMessage" class="error-message"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="utilities.js"></script>
+
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Girl</title>
+</head>
+
+<body>
+  <h1>Update Girl Information</h1>
+  <form id="updateGirlForm">
+    <div>
+      <label for="girlName">Girl Name:</label>
+      <input type="text" id="girlName" name="girlName" required>
+    </div>
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required>
+    </div>
+    <div>
+      <label for="guardianName">Guardian Name:</label>
+      <input type="text" id="guardianName" name="guardianName" required>
+    </div>
+    <div>
+      <label for="contactNumber">Contact Number:</label>
+      <input type="tel" id="contactNumber" name="contactNumber" required>
+    </div>
+    <button type="submit">Update Girl</button>
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+  <script src="update-girl.js"></script>
+</body>
+</html>

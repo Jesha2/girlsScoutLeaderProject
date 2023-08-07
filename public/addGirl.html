@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Girl</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include your styles if needed -->
+</head>
+<body>
+  <header >
+    <a  href="index.html"> <img class="logo" src="./images/MicrosoftTeams-image.png" alt="Girl Scouts Logo"></a>
+    <h1>Welcome to Our Troop 7174</h1>
+    <div>
+      <button class="btn" > <a class="btn" href="dashboard.html">Dashboard</a></button>
+      <button class="btn" id="logoutButton">Logout</button>
+      
+    </div>
+</header>
+  <div  class="centered-form">
+ 
+  <form id="addGirlForm">
+    <h2>Add Girl Details</h2>
+    <label for="girlName">Girl Name:</label>
+    <input type="text" id="girlName" class="form-control" name="girlName" required><br>
+
+    <label for="guardianName">Guardian Name:</label>
+    <input type="text" id="guardianName" class="form-control" name="guardianName" required><br>
+
+    <label for="contactNumber">Contact Number:</label>
+    <input type="text" id="contactNumber" class="form-control" name="contactNumber" required><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required class="form-control"value="8" min="5"><br>
+    <!-- <button type="submit" class="btn" id="addGirlSubmitBtn">Add Girl</button> -->
+
+    <button type="submit" class="btn" id="addGirlSubmitBtn" onclick="addGirl(event)">Add Girl</button>
+
+  </form>
+</div>
+<div id="errorMessage" class="error-message"></div>  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="girlActivityMethods.js"></script>
+</body>
+</html>

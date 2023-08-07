@@ -1,0 +1,21 @@
+@media print{body{margin:0 20px;print-color-adjust:exact;-webkit-print-color-adjust:exact;visibility:visible}
+.accordian_item .collapse{display:block}
+.print-icon-component{display:none}
+div{overflow:auto !important}
+img,.accordian_item{page-break-before:auto;page-break-after:auto;page-break-inside:avoid}
+.row.m-0{display:flex}
+#imgContainer{display:block !important;margin-top:12px;margin-left:15px;margin-bottom:20px;height:100px}
+;#printPageImg{height:100px}
+.sec-nav-cont{background-color:#fff !important}
+.gs-sec-navigation{background-color:#fff !important}
+.sec-nav-cont{background-color:#fff}
+.header{display:none}
+.faf-list-view{width:30.5%;margin-left:18px}
+}
+.print-icon-component{height:40px;margin-top:19px}
+.print-anchor-link{float:right;height:inherit}
+.print-icon-image{height:40px;width:40px;margin-right:22px}
+@media screen and (max-width:767px){.print-icon-component{margin-bottom:37px}
+}
+@media screen and (min-width:1024px){.print-icon-component{margin-top:20px}
+}

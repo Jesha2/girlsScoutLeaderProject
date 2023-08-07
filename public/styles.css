@@ -1,0 +1,218 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #7bcf80;
+  font-weight: bold;
+  /* animation: fadeIn 0.7s ease-in-out; */
+}
+
+header {
+  background-color: #169a21;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1,h2{
+  color:white;
+  align-self: center;
+  text-align: center;
+  font-family:cursive;
+  font-size:39px;
+}
+h2{
+  font-size:29px;
+}
+
+.logo {
+  width: 190px;
+  margin-left:1%;
+}
+button a{
+  text-decoration-line: none;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+
+
+.carousel-inner {
+  max-height: 400px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #169a21;
+}
+
+.carousel-control-prev-icon {
+  margin-left: -30px;
+}
+
+.carousel-control-next-icon {
+  margin-right: -30px;
+}
+
+.carousel-container {
+     /* Adjust as needed */
+      height: calc(100vh - 200px);
+    
+    overflow: hidden; 
+  }
+  
+  .carousel-inner {
+    max-height: 100%;
+  }
+
+  /* .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%;
+  } */
+  
+  .centered-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: calc(100vh - 200px); */
+  }
+  
+  form {
+    margin-top:2%;
+    width: 300px;
+    text-align: center; /* Center-align the form content */
+  }
+  
+  /* .form-group {
+    margin-bottom: 15px;
+  } */
+  
+  /* label {
+    display: block; 
+    font-weight: bold;
+     margin-bottom: 5px; 
+  } */
+  
+  .form-control {
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+  }
+  
+  /* .btn {
+    background-color: #169a21;
+    color: #fff;
+    
+    padding: 8px 12px;
+   
+    
+  } */
+  
+   
+  .btn {
+    font-size: 19px;
+    border-radius: 14px;
+    transition: background-color 0.5s, transform 0.5s;
+    color:#169a21;
+    border: none;
+    background-color: white;
+   
+    cursor: pointer;
+    padding: 8px 12px;
+    margin:2px;
+  }
+  .btn:hover {
+    background-color: #a2ee08;
+    transform: scale(1.1);
+  }
+
+ 
+
+  
+  .error-message {
+    text-align: center;
+    margin-top: 10px; 
+    color: red;
+  }
+
+  /* Apply basic styles to the dashboard layout */
+ .dashboard {
+  display: flex;
+  /* height: 150vh; */
+}
+
+/* Style for the girls list */
+.girls-list{
+  flex: 1;
+  background-color: #b2deb5;
+  padding: 20px;
+  
+}
+.girl-item, .activity-item{
+  margin:17px;
+  padding : 7px;
+  font-size: 20px;
+  transition: transform 0.7s ease;
+ 
+}
+
+.girl-item button, .activity-item button{
+  font-size: 12px;
+  border-radius: 14px;
+  padding: 4px 8px;
+  margin:12px;
+}
+/* Style for the activities list */
+.activities-list {
+  flex: 1;
+  background-color: #b4ecc0;
+  padding: 20px;
+} 
+/* Style for the anchor tags in girls /activities list */
+a{
+    cursor:grabbing;
+    color:#169a21;
+    /* transition: color 0.3s ease;
+    transition: transform 0.7s ease; */
+    /* animation: fadeIn 0.9s ease-in-out; */
+  }
+  
+  a:hover {
+    color:#0a430f;
+    transform: scale(1.1);
+  }
+
+   @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* a {
+    animation: fadeIn 0.7s ease-in-out;
+   }*/ /* Apply the animation */
+  
+
+
+
+
+
+
+  
