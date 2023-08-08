@@ -37,7 +37,7 @@ app.post('/api/addParticipant',addParticipant)//activityDetail.html
 
 
 app.get('/api/getGirls/:id',getGirls)// in dashboard
-app.get('/api/getActivitiesByGirl/:girl_id',getActivitiesByGirl)
+app.get('/api/getActivitiesByGirl/:girl_id',getActivitiesByGirl)//used when a girl is clicked girlDetail
 
 app.get('/api/getActivities',getActivities)//used in dashboard
 app.get('/api/getActivity',getActivity)//used when an activity is clicked to get details

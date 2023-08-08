@@ -8,6 +8,34 @@ body {
   color:#04670c;
   /* animation: fadeIn 0.7s ease-in-out; */
 }
+/* Reset some default styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+/* Background image */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/camp_fire.jpeg'); /* Replace with your image */
+  background-size: cover;
+  filter: blur(3px); /* Apply the blur effect */
+  z-index: -1; /* Place the background behind the content */
+}
+
+/* Content section */
+.content {
+  position: relative;
+  z-index: 1; /* Place the content above the background */
+  padding: 20px;
+  color: white;
+}
+
 
 header {
   background-color: #169a21;
@@ -22,9 +50,12 @@ h1,h2{
   text-align: center;
   font-family:cursive;
   font-size:39px;
+  
 }
 h2{
-  font-size:29px;
+  font-size: 28px;
+  /* text-shadow: rgb(80, 71, 36) 1px 0 10px; */
+
 }
 
 .logo {
@@ -41,8 +72,6 @@ button a{
   justify-content: center;
   margin-top: 1rem;
 }
-
-
 
 .carousel-inner {
   max-height: 400px;

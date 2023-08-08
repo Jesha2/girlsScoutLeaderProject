@@ -3,7 +3,7 @@
 if(sessionStorage.getItem("token") == null)
   (window.location.href = "/public/index.html") && sessionStorage.clear()
     else{
-    //alert("ypu are in dashboard")
+    //alert("you are in dashboard")
     }
 
     //let userId = sessionStorage.getItem("userId");

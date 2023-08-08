@@ -24,8 +24,16 @@ module.exports = {
 
     getActivities:(req,res) => {
       console.log("Getting Activities");
+      //  Get upcoming activities (ordered by date ascending)and  Get past activities (ordered by date descending)
       sequelize.query(`
-        select * from activities 
+      
+      SELECT *
+      FROM activities
+      WHERE CAST(date AS DATE) >= current_date
+      order by DATE
+      
+
+    
       `).then(dbRes => res.status(200).send(dbRes[0]))
       .catch(err => res.status(400).send(err))
     },
