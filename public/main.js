@@ -28,7 +28,7 @@
   
   function postUserData(leaderData) {
       // Use Axios to send leaderData to the server
-      axios.post('http://localhost:4001/api/signUp', leaderData)
+      axios.post('/api/signUp', leaderData)
       .then(async (res) => {
               // Handle success
               alert("You have been added successfully. Please login");

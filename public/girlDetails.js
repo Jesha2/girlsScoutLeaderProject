@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
         try {
             // Fetch and display girls who are part of the girl
-            const response = await axios.get(`http://localhost:4001/api/getActivitiesByGirl/${girl.girl_id}`);
+            const response = await axios.get(`/api/getActivitiesByGirl/${girl.girl_id}`);
             const activityList = document.getElementById('participantList');
             response.data.forEach(activity => {
                 const li = document.createElement('li');

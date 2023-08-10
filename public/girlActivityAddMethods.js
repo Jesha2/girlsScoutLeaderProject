@@ -24,7 +24,7 @@ function addGirl(e){
           };
           console.log(girlData);
           // alert("axios call  ")
-          axios.post('http://localhost:4001/api/addGirl', girlData)
+          axios.post('/api/addGirl', girlData)
             .then(response => {
               // alert("girl added in response")
               // Handle successful response from the server
@@ -63,7 +63,7 @@ function addGirl(e){
           };
           console.log(activityData);
           // alert("axios call  ")
-          axios.post('http://localhost:4001/api/addActivity', activityData)
+          axios.post('/api/addActivity', activityData)
             .then(response => {
               // alert("activity added in response")
               // Handle successful response from the server
@@ -77,6 +77,6 @@ function addGirl(e){
               // Handle error
               console.error('Error adding activity:', error);
             });
-        }alert("Please fill the fields with the correct values")
+        }else alert("Please fill the fields with the correct values")
 
       }

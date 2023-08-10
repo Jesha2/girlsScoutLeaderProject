@@ -1,3 +1,5 @@
+
+
 document.addEventListener("DOMContentLoaded", async function() {
     const activityData = sessionStorage.getItem('currentActivity');
     const activity = JSON.parse(activityData);
@@ -9,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         console.log(activity);
         try {
             // Fetch and display girls who are part of the activity
-            const participantsResponse = await axios.get(`http://localhost:4001/api/getGirlsByActivity/${activity.activity_id}`);
+            const participantsResponse = await axios.get(`/api/getGirlsByActivity/${activity.activity_id}`);
             const participantList = document.getElementById('participantList');
             participantsResponse.data.forEach(girl => {
                 const li = document.createElement('li');
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async function() {
             });
 
             // Fetch and populate the dropdown with girls not in the activity
-            const girlsNotInActivityResponse = await axios.get(`http://localhost:4001/api/getGirlsNotInActivity/${activity.activity_id}`);
+            const girlsNotInActivityResponse = await axios.get(`/api/getGirlsNotInActivity/${activity.activity_id}`);
             const girlSelect = document.getElementById('girlSelect');
             girlsNotInActivityResponse.data.forEach(girl => {
                 const option = document.createElement('option');
@@ -35,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async function() {
                 if (selectedGirl) {
                     try {
                         // Add logic here to send the selected girl to the server and update the participation table
-                        const response = await axios.post('http://localhost:4001/api/addParticipant', {
+                        const response = await axios.post('/api/addParticipant', {
                             activity_id: activity.activity_id,
                             girl_id: selectedGirl
                         });

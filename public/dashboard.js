@@ -21,7 +21,7 @@ if(sessionStorage.getItem("token") == null)
       if (result) {
       
               // Delete girl records
-              axios.delete(`http://localhost:4001/api/deleteGirl/${girl_id}`)
+              axios.delete(`/api/deleteGirl/${girl_id}`)
               .then(response =>{
                 console.log('girl scout  deleted successfully:')   ;
                  window.location.href = `dashboard.html`;   
@@ -34,7 +34,7 @@ if(sessionStorage.getItem("token") == null)
     function deleteActivity(activity_id,activity_name){
       const result = window.confirm(`Are you sure you want to delete ${activity_name}`);
       if (result) {
-              axios.delete(`http://localhost:4001/api/deleteActivity/${activity_id}`)
+              axios.delete(`/api/deleteActivity/${activity_id}`)
               .then(response=> {console.log(`Deletion of ${activity_name} successful`);
                 window.location.href = `dashboard.html`;   
 
@@ -45,7 +45,7 @@ if(sessionStorage.getItem("token") == null)
     }
 
     function populateGirlsList() {
-      axios.get(`http://localhost:4001/api/getGirls/${id}`)
+      axios.get(`/api/getGirls/${id}`)
         .then(response => {
           const girlsData = response.data; // Assuming the response contains an array of girls
     
@@ -125,7 +125,7 @@ if(sessionStorage.getItem("token") == null)
     
 
     function populateActivitiesList() {
-      axios.get(`http://localhost:4001/api/getActivities`)
+      axios.get(`/api/getActivities`)
         .then(response => {
           const activitiesData = response.data;
           console.log(activitiesData);

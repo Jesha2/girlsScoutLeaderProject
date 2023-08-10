@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     try {
-      const response = await axios.put(`http://localhost:4001/api/updateGirlsInfo`, girlData);
+      const response = await axios.put(`/api/updateGirlsInfo`, girlData);
       //alert('Girl information updated successfully');
       window.location.href = 'dashboard.html'; // Redirect to the dashboard page
     } catch (error) {

@@ -17,7 +17,7 @@ const getFormDataToLogIn = (e) => {
 };
 
 function postUserDataLogIn(leaderData) {
-  axios.post('http://localhost:4001/api/login', leaderData)
+  axios.post('/api/login', leaderData)
   .then(async (response) => {
       //alert("Yaay, You have been successfully logged in");
       console.log(response.data);

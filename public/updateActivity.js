@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             date: updateActivityForm.elements.date.value ,
             activity_id:activity.activity_id
         }
-        axios.put(`http://localhost:4001/api/updateActivity`,activityData)
+        axios.put(`/api/updateActivity`,activityData)
         .then(response =>{
             //alert('Girl information updated successfully');
             //console.log(response.data);

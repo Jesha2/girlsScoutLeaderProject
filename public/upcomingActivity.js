@@ -1,6 +1,6 @@
 // to get the the upcoming activity on the landing page
 const upcomingActivity = document.getElementById('upcomingActivity');
-axios.get(`http://localhost:4001/api/getUpcomingActivity`)
+axios.get(`/api/getUpcomingActivity`)
 .then(response => {
       const activityData = response.data;
       console.log(activityData);
