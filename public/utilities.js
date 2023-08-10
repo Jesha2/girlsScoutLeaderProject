@@ -1,3 +1,6 @@
+
+
+
 // Create and append the Dashboard button
   // Hide the login and sign up buttons
   // this is how the home page should look if user is logged in with sign in / login
@@ -5,22 +8,25 @@
 if(sessionStorage.getItem("token") != null){
   const loginPgBtn = document.getElementById('loginPgBtn');
   const signupPgBtn = document.getElementById('signupPgBtn');
+  loginPgBtn.style.display = 'none';
+  signupPgBtn.style.display = 'none';
+  createDashboardAndLogOut()
+}
   
-  
-//alert("ypu are in dashboard")
-loginPgBtn.style.display = 'none';
-signupPgBtn.style.display = 'none';
-const dashboardBtnContainer = document.getElementById('btnContainer');
-const dashboardBtn = document.createElement('button');
-dashboardBtn.classList.add('btn');
-dashboardBtn.textContent = 'Dashboard';
-dashboardBtn.addEventListener('click', navigateToDashboard);
-dashboardBtnContainer.appendChild(dashboardBtn);
-const logoutBtn = document.createElement('button');
-logoutBtn.classList.add('btn');
-logoutBtn.textContent = 'Logout';
-logoutBtn.addEventListener('click', logout);
-dashboardBtnContainer.appendChild(logoutBtn);
+function createDashboardAndLogOut (){
+        //alert("y0u are in dashboard"
+        
+        const dashboardBtnContainer = document.getElementById('btnContainer');
+        const dashboardBtn = document.createElement('button');
+        dashboardBtn.classList.add('btn');
+        dashboardBtn.textContent = 'Dashboard';
+        dashboardBtn.addEventListener('click', navigateToDashboard);
+        dashboardBtnContainer.appendChild(dashboardBtn);
+        const logoutBtn = document.createElement('button');
+        logoutBtn.classList.add('btn');
+        logoutBtn.textContent = 'Logout';
+        logoutBtn.addEventListener('click', logout);
+        dashboardBtnContainer.appendChild(logoutBtn);
 
   }
 
@@ -42,3 +48,7 @@ function navigateToDashboard() {
     // Redirect the user to the dashboard page
     window.location.href = 'dashboard.html';
 }
+
+
+
+

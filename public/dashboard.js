@@ -51,6 +51,7 @@ if(sessionStorage.getItem("token") == null)
     
           // Clear the existing list
           //girlsList.innerHTML = '';
+          
           girlsList.innerHTML=`<h2>Girls List</h2>`;
 
           // Create add button button
@@ -63,8 +64,8 @@ if(sessionStorage.getItem("token") == null)
           });
           girlsList.appendChild(addGirlBtn);
 
-          
           // Loop through the data and create list items
+          if(girlsData.length !=0) {
           girlsData.forEach(girl => {
             const listItem = document.createElement('div');
             listItem.classList.add('girl-item');
@@ -106,10 +107,15 @@ if(sessionStorage.getItem("token") == null)
             // Append the list item to the girlsList
             girlsList.appendChild(listItem);
           });
+          }else {
+            console.log("No girls to dispay. Please add girl scout")
+    
+          }
         })
         .catch(error => {
           console.error('Error fetching girls data:', error);
         });
+      
     }
 
     /************************Activity            */

@@ -18,6 +18,7 @@ module.exports = {
         const {id} = req.params
         sequelize.query(`
           select * from girls where leader_id = ${id}
+          order by girl_id desc
         `).then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => res.status(400).send(err))
     },
@@ -37,6 +38,25 @@ module.exports = {
       `).then(dbRes => res.status(200).send(dbRes[0]))
       .catch(err => res.status(400).send(err))
     },
+
+    getUpcomingActivity:(req,res) => {
+      console.log("Getting Activities");
+      //  Get upcoming activities (ordered by date ascending)and  Get past activities (ordered by date descending)
+      sequelize.query(`
+      
+      SELECT *
+      FROM activities
+      WHERE CAST(date AS DATE) >= current_date
+      order by DATE
+      limit 1
+      
+
+    
+      `).then(dbRes => res.status(200).send(dbRes[0]))
+      .catch(err => res.status(400).send(err))
+    },
+
+    
 
     updateGirlsInfo:(req,res) => {
       console.log("updateGirlsInfo");

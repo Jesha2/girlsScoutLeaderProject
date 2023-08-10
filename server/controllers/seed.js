@@ -61,11 +61,14 @@ module.exports = {
 
             INSERT INTO activities (activity_name, date, description, leader_id)
             VALUES ('Horse Riding', '2023-09-02', 'At camp Ricoe', 1),
+            ('Food Bank', '2023-10-02', 'At camp Beumount',3),
             ('Canoeing', '2023-10-02', 'At camp Beumount',3),
             ('Camping', '2023-10-02', 'At camp Eldorado', 1),
+            ('Movie under the stars', '2023-10-02', 'At camp Eldorado', 1),
             ('Selling Cookies', '2023-11-02', 'H.E.B', 3),
             ('Recycling', '2023-10-05', 'Scout Room', 3),
             ('First Aid', '2023-11-14', 'San Jacinto Community Center', 3),
+            ('Library', '2023-11-14', 'Reading badge - San Jacinto Library', 3),
             ('Senior Home Visit', '2023-12-14', 'Trinity Oaks Of Pearland', 3);
 
             INSERT INTO participation (activity_id, girl_id)
