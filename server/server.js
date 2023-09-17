@@ -1,7 +1,9 @@
 const express = require('express')
 const path = require('path')
 const cors = require('cors')
-const app = express()
+const app = express();
+require('dotenv').config()
+const {SERVER_PORT} = process.env
 
 // const corsOptions = {
 //     exposedHeaders: 'Authorization',
@@ -51,4 +53,4 @@ app.delete('/api/deleteGirl/:id',deleteGirl)
 app.put('/api/updateActivity',updateActivity)
 app.delete('/api/deleteActivity/:id',deleteActivity)
 
-app.listen(4001,() => console.log(`server running on 4001`))//
+app.listen(SERVER_PORT,() => console.log(`server running on the PORT ${SERVER_PORT}`))//
