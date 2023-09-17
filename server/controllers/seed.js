@@ -73,7 +73,7 @@ module.exports = {
 
             INSERT INTO participation (activity_id, girl_id)
             VALUES (1, 1), (1, 2), 
-            (2, 1), (2, 2)
+            (2, 1), (2, 2),
            (3, 2), (3, 1),
             (4, 1), (4, 2);
                 
